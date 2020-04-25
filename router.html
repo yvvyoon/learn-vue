@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Vue Router</h1>
+        <p>
+            <router-link to="/main">To main</router-link>
+            <br>
+            <router-link to="/login">To login</router-link>
+        </p>
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://unpkg.com/vue-router@3.1.6/dist/vue-router.js"></script>
+    <script>
+        let Main = { template: '<div>main</div>' }
+        let Login = { template: '<div>login</div>' }
+        let routes = [
+            { path: '/main', component: Main },
+            { path: '/login', component: Login },
+        ]
+        let router = new VueRouter({
+            mode: 'history',
+            routes
+        })
+        let app = new Vue({
+            router
+        }).$mount('#app')
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Vue Router</h1>
+        <p>
+            <router-link to="/main">To main</router-link>
+            <br>
+            <router-link to="/login">To login</router-link>
+        </p>
+        <router-view></router-view>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <script src="https://unpkg.com/vue-router@3.1.6/dist/vue-router.js"></script>
+    <script>
+        let Main = { template: '<div>main</div>' }
+        let Login = { template: '<div>login</div>' }
+        let routes = [
+            { path: '/main', component: Main },
+            { path: '/login', component: Login },
+        ]
+        let router = new VueRouter({
+            mode: 'history',
+            routes
+        })
+        let app = new Vue({
+            router
+        }).$mount('#app')
+    </script>
+</body>
+</html>
